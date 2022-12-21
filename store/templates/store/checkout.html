@@ -42,7 +42,9 @@
 
 			<br>
 			<div class="box-element hidden" id="payment-info">
-				<small>Paypal Options</small>
+				<small>Bikash</small>
+
+				<button id=" make-payment">Make Payment</button>
 			</div>
 			
 		</div>
@@ -66,4 +68,17 @@
 			</div>
 		</div>
 	</div>
+
+	<script type = "text/javascript">
+		var  form = document.getElementById('form')
+
+		form.addEventListener('submit', function(e){
+		e.preventDefault()
+		console.log('Form submitted....')
+		document.getElementById('form-button').classList.add('hidden')
+		document.getElementById('payment-info').classList.remove('hidden')
+		})
+	</script>
+
+	
 {% endblock content %}
